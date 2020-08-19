@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.template import loader
 from django.template.loader import render_to_string
 from .models import *
