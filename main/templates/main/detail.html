@@ -1,0 +1,50 @@
+{% extends "main/base.html" %}
+{% block title %}PORTFOLIO|{{section.title}}{% endblock %}
+{% block content %}
+<div class="row">
+	<div class="col-md-4">
+		{% include "main/header.html" %}
+		<br>
+		<a href="/">BACK TO HOMEPAGE</a>
+	</div>
+	<div class="col-md-8">
+		<div class="card">
+			<div class="card-body">
+			  <h5 class="card-title text-right">{{section.title}}</h5>
+			  <p class="card-text text-right">{{section.sub_title}}</p>
+			  <p class="card-text text-right"><a href="{{section.github_link}}">view on github</a></p>
+			  <p class="card-text text-right"><a href="{{section.external_link}}">View site</a></p>
+	
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+			  <p class="card-text">
+					{{section.content}}
+			  </p>
+			</div>
+	    </div>
+	</div>
+</div>
+{% if code_example %}
+<br>
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+			  <p class="card-text">
+					{{code_example}}
+			  </p>
+			</div>
+	    </div>
+	</div>
+</div>
+{% endif %}
+
+
+{% endblock %}
