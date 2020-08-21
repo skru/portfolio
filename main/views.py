@@ -7,6 +7,7 @@ from .models import *
 
 site_settings = {
     "name": settings.PORTFOLIO_NAME,
+    "accreditation": settings.PORTFOLIO_ACCREDITATION,
     "title": settings.PORTFOLIO_TITLE,
     "email": settings.PORTFOLIO_EMAIL,
     "github": settings.PORTFOLIO_GITHUB,

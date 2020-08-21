@@ -1,21 +1,11 @@
 <div class="card bg-primary text-white">
 	<div class="card-body">
-
-		<h5 class="card-title">{{site_settings.name}}</h5>
-		<p class="card-text">{{site_settings.title}}</p>
-		<br>
-		<div class="row text-center">
-			<div class="col-4">
-				<a href="{{site_settings.email}}" class="text-white">EMAIL</a>
-			</div>
-			<div class="col-4">
-				<a href="{{site_settings.github}}" class="text-white">GITHUB</a>
-			</div>
-			<div class="col-4">
-				<a href="{{site_settings.linkedin}}" class="text-white">LINKEDIN</a>
-			</div>
-		</div>
-
+		<h5 class="card-title">{{site_settings.name}}<small class="text-muted">
+          BS.c
+        </small></h5>
+		<blockquote class="blockquote">
+		  <p class="mb-0">{{site_settings.title}}</p>
+		</blockquote>
 	</div>
 </div>
 

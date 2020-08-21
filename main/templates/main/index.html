@@ -3,19 +3,39 @@
 {% block content %}
 <div class="card-columns">
 	{% include "main/header.html" %}
-
+	<div class="card p-3">
+		<div class="card-body">
+			<div class="row text-center">
+				<div class="col-4">
+					<a href="{{site_settings.email}}">EMAIL</a>
+				</div>
+				<div class="col-4">
+					<a href="{{site_settings.github}}">GITHUB</a>
+				</div>
+				<div class="col-4">
+					<a href="{{site_settings.linkedin}}">LINKEDIN</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	{% for section in sections %}
 	<a href="/{{section.slug}}">
 	  <div class="card p-3">
 	    {% if section.image %}<img class="card-img-top" src="{{section.image.url}}" alt="{{section.title}} screenshot">{% endif %}
-	    <div class="card-body">
+	    <div class="card-body section-body">
 	      <h5 class="card-title">{{section.title}}</h5>
 	      <p class="card-text">{{section.sub_title}}</p>
-	      <p class="card-text"><small class="text-muted">{{section.date}}</small></p>
+	      <p class="card-text text-right"><small class="text-muted">{{section.date|date:"M Y"}}</small></p>
 	    </div>
 	  </div>
 	</a>
 	{% endfor %}
-
+	<div class="card p-3">
+		<div class="card-body">
+			<div class="text-center">
+				<a href="{{site_settings.email}}">{{site_settings.email}}</a>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}
