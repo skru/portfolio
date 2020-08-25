@@ -3,6 +3,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 from django.template import loader
 from django.template.loader import render_to_string
+from django.utils.safestring import mark_safe
 from .models import *
 
 site_settings = {
@@ -27,7 +28,7 @@ def detail(request, slug):
     except Section.DoesNotExist:
         raise Http404("page does not exist")
     try:
-    	code_template = render_to_string('main/'+section.slug+'.html')
+    	code_template = mark_safe(render_to_string('main/'+section.slug+'.html'))
     except:
     	code_template = ""
 
