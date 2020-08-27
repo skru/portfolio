@@ -1,0 +1,12 @@
+.section-body {
+	color: #212529;
+}
+.card-title .text-muted{
+	color: white !important;
+}
+.link-no-style:hover{
+    text-decoration: none;
+}
+.detail-header {
+	height: 100%;
+}

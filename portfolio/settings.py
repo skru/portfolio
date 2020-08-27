@@ -64,6 +64,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# tinymce settings https://www.tiny.cloud/docs/  https://django-tinymce.readthedocs.io/en/latest/installation.html
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace,code,link",
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

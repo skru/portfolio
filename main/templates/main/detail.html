@@ -3,12 +3,12 @@
 {% block content %}
 <div class="row">
 	<div class="col-md-4">
-        <a href="/">
+        <a href="/" class="link-no-style">
 		{% include "main/header.html" %}
         </a>
 	</div>
 	<div class="col-md-8">
-		<div class="card">
+		<div class="card detail-header">
 			<div class="card-body">
 			  <h5 class="card-title text-right">{{section.title}}</h5>
 			  <p class="card-text text-right">{{section.sub_title}}</p>	
@@ -43,33 +43,25 @@
 </div>
 {% endif %}
 <br>
-<div class="card-deck text-center">
-  {% if section.external_link %}
- 
+<div class="card-columns text-center">
+
+  {% for section_link in section.section_link.all %}
   <div class="card">
-    <a href="{{section.external_link}}" add target="_blank">
+    <a href="{{section_link.url}}" class="link-no-style" add target="_blank">
     <div class="card-body">
-      <p class="card-text">VIEW WEBSITE/PROJECT</p>
+      <p class="card-text">{{section_link.title}}</p>
       <p>(opens in new tab)</p>
     </div>
     </a>
   </div>
+  {% endfor %}
   
-  {% endif %}
-  {% if section.github_link %}
- 
+  {% for section_image in section.section_image.all %}
   <div class="card">
-    <a href="{{section.github_link}}" add target="_blank">
-    <div class="card-body">
-      <p class="card-text">GITHUB</p>
-      <p>(opens in new tab)</p>
-    </div>
-    </a>
+  	<img class="card-img-top" src="{{section_image.image.url}}" alt="Card image cap">
   </div>
- 
-  {% endif %}
+  {% endfor %}
+
 </div>
-
-
 
 {% endblock %}

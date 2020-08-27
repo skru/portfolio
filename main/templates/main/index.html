@@ -8,13 +8,13 @@
 		<div class="card-body">
 			<div class="row text-center">
 				<div class="col-4">
-					<a href="{{site_settings.email}}">EMAIL</a>
+					<a href="{{site_settings.email}}" class="link-no-style">EMAIL</a>
 				</div>
 				<div class="col-4">
-					<a href="{{site_settings.github}}">GITHUB</a>
+					<a href="{{site_settings.github}}" class="link-no-style">GITHUB</a>
 				</div>
 				<div class="col-4">
-					<a href="{{site_settings.linkedin}}">LINKEDIN</a>
+					<a href="{{site_settings.linkedin}}" class="link-no-style">LINKEDIN</a>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,6 @@
 	{% for section in sections %}
 	<a href="/{{section.slug}}">
 	  <div class="card p-3">
-	    {% if section.image %}<img class="card-img-top" src="{{section.image.url}}" alt="{{section.title}} screenshot">{% endif %}
 	    <div class="card-body section-body">
 	      <h5 class="card-title">{{section.title}}</h5>
 	      <p class="card-text">{{section.sub_title}}</p>
