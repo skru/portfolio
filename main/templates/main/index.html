@@ -4,11 +4,18 @@
 <div class="card-columns">
 	{% include "main/header.html" %}
     
+    <div class="card p-3">
+        <div class="card-body">
+            <h5 class="card-title">About me</h5>
+           <p class="card-text">{{site_settings.about|safe}}</p>
+        </div>
+    </div>
+    
 	<div class="card p-3">
 		<div class="card-body">
 			<div class="row text-center">
 				<div class="col-4">
-					<a href="{{site_settings.email}}" class="link-no-style">EMAIL</a>
+					<a href="mailto:{{site_settings.email}}" class="link-no-style">EMAIL</a>
 				</div>
 				<div class="col-4">
 					<a href="{{site_settings.github}}" class="link-no-style">GITHUB</a>
@@ -30,11 +37,11 @@
 	  </div>
 	</a>
 	{% endfor %}
-	<div class="card p-3">
+<!-- 	<div class="card p-3">
 		<div class="card-body">
 			<div class="row text-center">
 				<div class="col-4">
-					<a href="{{site_settings.email}}">EMAIL</a>
+					<a href="mailto:{{site_settings.email}}">EMAIL</a>
 				</div>
 				<div class="col-4">
 					<a href="{{site_settings.github}}">GITHUB</a>
@@ -44,6 +51,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
 {% endblock %}

@@ -13,10 +13,11 @@ site_settings = {
     "email": settings.PORTFOLIO_EMAIL,
     "github": settings.PORTFOLIO_GITHUB,
     "linkedin": settings.PORTFOLIO_LINKEDIN,
+    "about": settings.PORTFOLIO_ABOUT,
 }
 
 def index(request):
-    sections = Section.objects.all()
+    sections = Section.objects.filter(active=True)
     template = loader.get_template('main/index.html')
     context = {'sections': sections, 'site_settings': site_settings}
     return HttpResponse(template.render(context, request))

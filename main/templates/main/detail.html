@@ -58,7 +58,14 @@
   
   {% for section_image in section.section_image.all %}
   <div class="card">
-  	<img class="card-img-top" src="{{section_image.image.url}}" alt="Card image cap">
+  	<img class="card-img-top" src="{{section_image.image.url}}" 
+         alt="{% if section_image.description %}{{section_image.description}}{% else %}{{section.title}} screenshot{% endif %}">
+      {% if section_image.description %}
+      <div class="card-body">
+        <p class="card-text"><small class="text-muted">{{section_image.description}}</small></p>
+      </div>
+      {% endif %}
+      
   </div>
   {% endfor %}
 

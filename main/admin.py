@@ -9,6 +9,7 @@ class SectionLinkInlineAdmin(admin.TabularInline):
 
 @admin.register(Section)
 class SectionAdmin(admin.ModelAdmin):
+    list_display = ['title', 'active']
     inlines = [
         SectionImageInlineAdmin,
         SectionLinkInlineAdmin,
