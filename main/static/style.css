@@ -1,11 +1,21 @@
-.section-body {
-	color: #212529;
+.bg-primary {
+    background-color: #3f51b5 !important;
 }
-.card-title .text-muted{
+a {
+    color: #3f51b5;
+}
+.section-body {
+	color: #212529 !important;
+}
+.card-title .text-muted {
 	color: white !important;
 }
-.link-no-style:hover{
+.link-no-style:hover {
     text-decoration: none;
+    color: #3f51b5;
+}
+.link-no-style { 
+    color: #212529;
 }
 .detail-header {
 	height: 100%;

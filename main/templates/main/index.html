@@ -11,7 +11,7 @@
         </div>
     </div>
     
-	<div class="card p-3">
+	<div class="card p-3 info-card">
 		<div class="card-body">
 			<div class="row text-center">
 				<div class="col-4">
@@ -26,6 +26,7 @@
 			</div>
 		</div>
 	</div>
+    
 	{% for section in sections %}
 	<a href="/{{section.slug}}">
 	  <div class="card p-3">
@@ -37,20 +38,6 @@
 	  </div>
 	</a>
 	{% endfor %}
-<!-- 	<div class="card p-3">
-		<div class="card-body">
-			<div class="row text-center">
-				<div class="col-4">
-					<a href="mailto:{{site_settings.email}}">EMAIL</a>
-				</div>
-				<div class="col-4">
-					<a href="{{site_settings.github}}">GITHUB</a>
-				</div>
-				<div class="col-4">
-					<a href="{{site_settings.linkedin}}">LINKEDIN</a>
-				</div>
-			</div>
-		</div>
-	</div> -->
+
 </div>
 {% endblock %}
